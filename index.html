@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<title>WS AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="https://cdn.rawgit.com/AngularClass/angular-websocket/v2.0.0/dist/angular-websocket.js"></script>
+    	<script src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="PayloadController">
+			<h1>WS Angular JS</h1>
+			<input ng-model="payload.message" type="text">
+			<button ng-click="sendPayload()">Send</button>
+			<div ng-repeat="outMessage in output">{{outMessage.message}}</div>
+		</div>
+	</body>
+</html>
